@@ -1,18 +1,29 @@
-<body>
-    <div class="container">
-        <div class="background"></div>
-      <div class="content">
-        <div class="text-column">
-          <h1>Tu Momento, Nuestro Compromiso</h1>
-          <p>Transformamos tus momentos especiales en experiencias inolvidables. Descubre la magia de celebrar con nosotros y disfruta en nuestro exclusivo alojamiento estilo Airbnb. Donde cada detalle cuenta, creamos recuerdos que perduran.</p>
-          <button>lET'S CONNECT</button>
-        </div>
-        <div class="image-column">
-          <img src="/src/img/married.jpeg" alt="Descripción de la imagen" />
-        </div>
-      </div>
+---
+interface Props {
+  imageUrl: string;
+  title: string;
+  message: string;
+  buttonLabel: string;
+  action: () => void;
+}
+
+const { imageUrl, title, message, buttonLabel, action } = Astro.props;
+---
+
+<div class="container">
+    <div class="background"></div>
+  <div class="content">
+    <div class="text-column">
+      <h1>{title}</h1>
+      <p>{message}</p>
+      <button onclick={action}>{buttonLabel}</button>
     </div>
-  </body>
+    <div class="image-column">
+      <img src={imageUrl} alt={imageUrl} />
+    </div>
+  </div>
+</div>
+
 <style>
    body {
   margin: 0;
