@@ -3,5 +3,5 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "https://kimberllyflorez.github.io",
-  base: "/squishy",
+  base: "/dawnfer_web_page",
 });
