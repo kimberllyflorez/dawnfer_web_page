@@ -8,17 +8,19 @@ export const defaultLang = "en";
 export const ui = {
   en: {
     // Head
-    "head.dawnferEvents": "Dawnfer Events",
+    "head.dawnferEvents": "Squishy",
+    "head.home": "Home",
     "head.aboutUs": "About us",
     "head.contact": "Contact",
     "head.gallery": "Gallery",
-    "head.team": "Team",
+    "head.team": "Themes",
     // Nav
-    "nav.dawnferEvents": "DAWNFER EVENTS",
+    "nav.dawnferEvents": "Squishy",
+    "nav.home": "HOME",
     "nav.about": "ABOUT US",
     "nav.contact": "CONTACT",
     "nav.gallery": "GALLERY",
-    "nav.team": "TEAM",
+    "nav.themes": "THEMES",
     // Index
     "index.heroTitle": "Tu felicidad, nuestro compromiso",
     "index.heroMessage":

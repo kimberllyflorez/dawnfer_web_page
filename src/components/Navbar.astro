@@ -14,9 +14,6 @@ const t = useTranslations(lang);
       <a href="https://instagram.com/dawnfer_eventos_tunja?igshid=MzMyNGUyNmU2YQ=="class="link">
         <img  src="/src/img/icons/Light_InstagramLogo.svg" alt="Instagram">
       </a>
-      <a class="link">
-        <img src="/src/img/icons/Light_Storefront.svg" alt="Store">
-      </a>
     </ul>
     
     <ul class="navbar-ul">
@@ -26,16 +23,19 @@ const t = useTranslations(lang);
     
     <ul class="navbar-ul">
       <li class="link">
+        <a href="/">{t('nav.home')}</a>
+      </li>
+      <li class="link">
+        <a href="/themes">{t('nav.themes')}</a>
+      </li>
+      <li class="link">
         <a  href="/aboutus">{t('nav.about')}</a>
       </li> 
-      <li class="link">
-        <a href="/contact">{t('nav.contact')}</a>
-      </li>
       <li class="link">
         <a  href="/gallery">{t('nav.gallery')}</a>
       </li>
       <li class="link">
-        <a href="/team">{t('nav.team')}</a>
+        <a href="/contact">{t('nav.contact')}</a>
       </li>
     </ul>
   </div>
