@@ -4,10 +4,9 @@ interface Props {
   title: string;
   message: string;
   buttonLabel: string;
-  action: () => void;
 }
 
-const { imageUrl, title, message, buttonLabel, action } = Astro.props;
+const { imageUrl, title, message, buttonLabel } = Astro.props;
 ---
 
 <div class="container">
@@ -16,7 +15,7 @@ const { imageUrl, title, message, buttonLabel, action } = Astro.props;
     <div class="text-column">
       <h1>{title}</h1>
       <p>{message}</p>
-      <button onclick={action}>{buttonLabel}</button>
+      <button>{buttonLabel}</button>
     </div>
     <div class="image-column">
       <img src={imageUrl} alt={imageUrl} />
