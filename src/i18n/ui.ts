@@ -7,15 +7,15 @@ export const defaultLang = "en";
 
 export const ui = {
   en: {
+    // Brand
+    "brand.name": "Squishy",
     // Head
-    "head.dawnferEvents": "Squishy",
     "head.home": "Home",
     "head.aboutUs": "About us",
     "head.contact": "Contact",
     "head.gallery": "Gallery",
     "head.team": "Themes",
     // Nav
-    "nav.dawnferEvents": "Squishy",
     "nav.home": "HOME",
     "nav.about": "ABOUT US",
     "nav.contact": "CONTACT",
@@ -27,6 +27,7 @@ export const ui = {
       "Transformamos tus momentos especiales en experiencias inolvidables. Descubre la magia de celebrar con nosotros y disfruta en nuestro exclusivo alojamiento estilo Airbnb. Donde cada detalle cuenta, creamos recuerdos que perduran.",
     "index.heroActionLabel": "Let's Connect",
     // About us
+    "aboutUs.heroMessage": "We are a company that make party theme events....",
   },
   es: {
     "nav.home": "INICIO",
