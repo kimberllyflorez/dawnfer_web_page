@@ -1,6 +1,8 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.astro";
+import AboutUsCard from "../components/about_us_card/AboutUsCard.astro";
 
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { AppImages } from '../common/appImages';
@@ -12,5 +14,21 @@ const t = useTranslations(lang);
 <Layout title={t('head.aboutUs')}>
 	<main>
 		<Navbar></Navbar>
+		<Hero 
+			imageUrl={AppImages.marriedDecoration}
+			title={t('aboutUs.heroTitle')}
+			message={t('aboutUs.heroMessage')}>
+		</Hero>
+		<AboutUsCard 
+			imageUrl={AppImages.luciaPhoto}
+			title={t('aboutUs.lucia')}
+			message={t('aboutUs.luciaDescription')}
+			isLeft=true>
+		</AboutUsCard>
+		<AboutUsCard 
+			imageUrl={AppImages.lauraPhoto}
+			title={t('aboutUs.laura')}
+			message={t('aboutUs.lauraDescription')}>
+		</AboutUsCard>
 	</main>
 </Layout>

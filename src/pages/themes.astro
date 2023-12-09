@@ -1,6 +1,7 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
+import ThemeCard from "../components/theme_card/ThemeCard.astro"
 
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { AppImages } from '../common/appImages';
@@ -12,5 +13,11 @@ const t = useTranslations(lang);
 <Layout title={t('head.team')}>
 	<main>
 		<Navbar></Navbar>
+		<ThemeCard></ThemeCard>
+		<ThemeCard></ThemeCard>
+		<ThemeCard></ThemeCard>
+		<ThemeCard></ThemeCard>
+		<ThemeCard></ThemeCard>
+		<ThemeCard></ThemeCard>
 	</main>
 </Layout>

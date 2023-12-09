@@ -3,24 +3,31 @@ interface Props {
   imageUrl: string;
   title: string;
   message: string;
-  buttonLabel: string;
+  isLeft: bool;
 }
 
-const { imageUrl, title, message, buttonLabel } = Astro.props;
+const { imageUrl, title, message, isLeft } = Astro.props;
 ---
 
 <div class="container">
-  <div class="background"></div>
-  <div class="content">
-    <div class="text-column">
-      <h1>{title}</h1>
-      <p>{message}</p>
-      <button>{buttonLabel}</button>
-    </div>
-    <div class="image-column">
-      <img src={imageUrl} alt={imageUrl} />
-    </div>
-  </div>
+	<div class="content">
+		{isLeft ? 
+			<div class="image-column">
+				<img src={imageUrl} alt={imageUrl} />
+			</div>
+			<div class="text-column">
+				<h1>{title}</h1>
+				<p>{message}</p>
+			</div>
+		: 	<div class="text-column">
+				<h1>{title}</h1>
+				<p>{message}</p>
+			</div>
+			<div class="image-column">
+				<img src={imageUrl} alt={imageUrl} />
+			</div>
+		}
+	</div>
 </div>
 
 <style>
@@ -31,19 +38,11 @@ const { imageUrl, title, message, buttonLabel } = Astro.props;
     overflow: hidden;
     margin-top: 14px;
   }
-  .background {
-    position: absolute;
-    top: 5%;
-    z-index: -1;
-    width: 100%;
-    height: 50%;
-    background-color: #A0A69E;
-  }
+
   .content {
     display: flex;
     flex-direction: column;
     align-items: flex-start; 
-    /* background-color: #A0A69E;  */
     margin: 50px;
   }
   
@@ -52,31 +51,32 @@ const { imageUrl, title, message, buttonLabel } = Astro.props;
     padding-left: 60px;
     margin-top: 50px;
     width: 100%; 
-    border: color 1s; #A0A69E; 
-    background-color:#A0A69E; 
+    border: color 1s #A0A69E; 
+    background-color: #A0A69E; 
     padding:  40px;
   }
   
   .text-column h1{
     color: #000;
-    font-family: Inder;
+    font-family: 'Inter';
     font-size: 30px;
     font-style:normal;
     font-weight:bold ;
     font-weight: 400;
     line-height: 68px;
   }
+  
   .text-column p{
-    
     font-family: Inria Serif;
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
     line-height: 68px; 
   }
+
   .text-column > button {
     padding-left: 20px;
-    font-family: Inder;
+    font-family: 'Inter';
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -84,13 +84,12 @@ const { imageUrl, title, message, buttonLabel } = Astro.props;
     color: #FFF;
     background-color: #000;
   }
+
   .text-column button:hover {
-    background-color:#A0A69E;
+    background-color: #A0A69E;
   }
   
   .image-column {
-    width: 100%; 
-    /* margin: 40px; */
     margin-top: 50px;
     padding: 40px;
     border-radius: 3px;
@@ -98,7 +97,6 @@ const { imageUrl, title, message, buttonLabel } = Astro.props;
   }
   
   .image-column img {
-    width: 100%;
     height: auto;
     border-radius: 8px;
   }
@@ -108,14 +106,10 @@ const { imageUrl, title, message, buttonLabel } = Astro.props;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
-      align-items: center;
-      /* background-color: #A0A69E; */
     }
     
     .text-column,
     .image-column {
-      width: 48%; 
-      margin-bottom: 0;
       background-color: floralwhite;
     }
   }
