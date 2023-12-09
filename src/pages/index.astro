@@ -2,13 +2,14 @@
 import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
-
+import Footer from '../components/footer.astro';
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { AppImages } from '../common/appImages';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
+
 
 <Layout title={t('brand.name')}>
 	<main>
@@ -19,5 +20,7 @@ const t = useTranslations(lang);
 			message={t('index.heroMessage')}
 			buttonLabel={t('index.heroActionLabel')}>
 		</Hero>
+		<Footer></Footer>
 	</main>
+	
 </Layout>

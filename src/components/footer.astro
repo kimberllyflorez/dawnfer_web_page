@@ -1,0 +1,73 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+
+---
+<footer class="footer">
+<ul>
+    <h1><span class="footer-icon">&#x1F4DE</span>{t('footer.findUs')}</h1>
+    <a href="https://www.google.com.co/maps/dir/-33.8362368,151.1981056/Sal%C3%B3n+de+Eventos+Campestre+Casa+Fl%C3%B3rez/@-1.055849,133.1251995,3z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x8e6a7b709479274f:0xead14769f5e9725b!2m2!1d-73.3454374!2d5.5788373?hl=es-co&entry=ttu">
+     {t('footer.adress')}</a>
+</ul>
+<ul>
+    
+    <h1><span class="footer-icon">&#x1F4CD;</span>{t('footer.phonetitle')}</h1>
+    <a href="https://api.whatsapp.com/send/?phone=%2B573208890057&text&type=phone_number&app_absent=0" >
+    {t('footer.phone')}    </a>
+</ul>
+<ul>
+    
+    <h1><span class="footer-icon">&#x1F4CD;</span>{t('footer.emailTitle')}</h1>
+    <a href="mailto:albalusanchezramos@gmail.com " >
+    {t('footer.email')}    </a>
+</ul>
+</footer>
+
+<style>
+    .footer {
+    display: flex;
+    align-items: center;
+    width: 100%;
+  }
+    ul{
+        font-size: 10px;
+    font-family: "Inter";
+      
+    }
+    a{
+    font-size: 12px;
+    font-family: "Inter";
+    color: #000;
+    text-decoration: underline;
+    text-decoration-color: chocolate;
+    text-decoration-thickness:calc();
+    padding: 10px;
+    font-weight: lighter;
+    list-style:circle;
+  }
+    .footer-icon{
+        filter: grayscale(100%); 
+        margin-right: 10px;
+    }
+    @media only screen and (max-width: 600px)  {
+           
+            a {
+                font-size: 3vw;
+            }
+            h1{
+                font-size: 3vw;
+            }
+
+            .footer {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            ul {
+                margin-bottom: 0;
+            }
+        }
+</style>
