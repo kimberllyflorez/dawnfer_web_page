@@ -1,0 +1,128 @@
+<nav >
+  <div class="navbar-content">
+    <ul class="navbar-icons">
+      <li class="link">
+        <img class="icon" src="/src/img/icons/Light_FacebookLogo.svg" alt="Facebook">
+      </li>
+      <li class="link">
+        <img class="icon" src="/src/img/icons/Light_InstagramLogo.svg" alt="Instagram">
+      </li>
+      <li class="link">
+        <img class="icon" src="/src/img/icons/Light_Storefront.svg" alt="Store">
+      </li>
+    </ul>
+    <ul class="navbar-ul">
+      <li class="nav-item">
+        <a class="nav-link" href="#">HOME</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">ABOUT US</a>
+      </li>
+      </ul>
+      <a class="navbar-brand" href="#"><h1>DAWNFER EVENTOS</h1></a>
+
+     <ul class="navbar-ul"> 
+      <li >
+        <a class="nav-link" href="#">CONTACT</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">GALLERY</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">THEME</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <style  >
+/* .navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 20px;
+  background-color: ##EBF1E8;
+} */
+
+.navbar-brand {
+  display: flex;
+  font-size: 40px;
+  font-family: "Franklin Gothic Medium";
+  font-weight: 700;
+  color: #000;
+  text-align: center;
+
+
+}
+
+.navbar-content {
+ display: flex;
+ flex-direction: row;
+  align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-content {
+    display:flex;
+    flex-direction: column;
+  }
+
+  .navbar-toggler {
+    display: block;
+  }
+} 
+
+ .navbar-ul {
+  display: flex;
+  flex-direction: row;
+} 
+.navbar-icons {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-start ; 
+} 
+
+.navbar-links {
+  list-style: none;
+}
+
+.nav-item {
+}
+
+.nav-link {
+  font-size: 18px;
+  font-family: "Inter";
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  background-color: #000;
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  margin: 4px;
+}
+
+.link {
+  text-decoration: none;
+  line-height: 1.4;
+  padding: calc(1rem - 1px);
+}
+
+.link:hover,
+.link:focus-within {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.link:focus-within li {
+  color: var(--accent-light);
+
+}
+      </style>
