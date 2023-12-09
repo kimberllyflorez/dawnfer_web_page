@@ -18,46 +18,43 @@ const t = useTranslations(lang);
         <img src="/src/img/icons/Light_Storefront.svg" alt="Store">
       </a>
     </ul>
-
+    
+    <ul class="navbar-ul">
+    </ul>
+    
+    <a class="navbar-brand" href="/"><h1>{t('nav.dawnferEvents')}</h1></a>
+    
     <ul class="navbar-ul">
       <li class="link">
-        <a href="/">{t('nav.home')}</a>
-      </li>
-      <li class="link">
         <a  href="/aboutus">{t('nav.about')}</a>
-      </li>
-      </ul>
-
-      <a class="navbar-brand" href="#"><h1>DAWNFER EVENTOS</h1></a>
-
-     <ul class="navbar-ul"> 
+      </li> 
       <li class="link">
-        <a href="#">CONTACT</a>
+        <a href="/contact">{t('nav.contact')}</a>
       </li>
       <li class="link">
-        <a  href="#">GALLERY</a>
+        <a  href="/gallery">{t('nav.gallery')}</a>
       </li>
       <li class="link">
-        <a href="#">THEME</a>
+        <a href="/team">{t('nav.team')}</a>
       </li>
     </ul>
   </div>
 </nav>
 
-  <style  >
-.navbar {
-  display: flex;
-  align-items: center;
-  width: 100%;
-}
-
-.navbar-brand {
- text-decoration-line: none;
-  display: flex;
- text-align: center;
- list-style: none;
+<style  >
+  .navbar {
+    display: flex;
+    align-items: center;
+    width: 100%;
   }
-
+  
+  .navbar-brand {
+    text-decoration-line: none;
+    display: flex;
+    text-align: center;
+    list-style: none;
+  }
+  
   .navbar-brand h1 {
     color: #000;
     font-family: "Koh Santepheap";
@@ -67,72 +64,72 @@ const t = useTranslations(lang);
     line-height: 68px;
     list-style: none;
   }
-
+  
   .navbar-icons {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
     justify-content: flex-start;
   }
-
+  
   .navbar-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-
+  
   .navbar-ul {
     display: flex;
     flex-direction: row;
     align-items: center;
   }
-
-
+  
+  
   .nav-link:hover {
     color: #ffffff;
     background-color: #000;
   }
-
+  
   
   .link {
-  list-style: none;
+    list-style: none;
     text-decoration: none;
     line-height: 1.4;
     padding: calc(1rem - 1px);
   }
-.link img{
+  .link img{
     width: 48px;
     height: 48px;
     margin: 4px;
   }
-.link a{
-  font-size: 18px;
+  .link a{
+    font-size: 18px;
     font-family: "Inter";
     color: #000;
     text-decoration: none;
     padding: 10px;
     display: inline-block;
-}
+  }
   .link:hover,
   .link:focus-within {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 10px;
   }
-
+  
   .link:focus-within li {
     color: var(--accent-light);
   }
-
+  
   @media screen and (max-width: 768px) {
     .navbar-content {
       flex-direction: column;
       align-items: flex-start;
     }
-
+    
     .navbar-ul {
       margin-top: 10px;
     }
   }
-
-
-      </style>
+  
+  
+</style>

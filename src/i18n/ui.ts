@@ -7,9 +7,18 @@ export const defaultLang = "en";
 
 export const ui = {
   en: {
-    "nav.home": "HOME",
+    // Head
+    "head.dawnferEvents": "Dawnfer Events",
+    "head.aboutUs": "About us",
+    "head.contact": "Contact",
+    "head.gallery": "Gallery",
+    "head.team": "Team",
+    // Nav
+    "nav.dawnferEvents": "DAWNFER EVENTS",
     "nav.about": "ABOUT US",
     "nav.contact": "CONTACT",
+    "nav.gallery": "GALLERY",
+    "nav.team": "TEAM",
     // Index
     "index.heroTitle": "Tu felicidad, nuestro compromiso",
     "index.heroMessage":
