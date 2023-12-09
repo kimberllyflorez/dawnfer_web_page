@@ -4,16 +4,22 @@ import Card from '../components/Card.astro';
 import Navbar from '../components/Navbar.astro';
 import Hero from '../components/Hero.astro';
 import AppStrings from '../common/AppStrings.ts'
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils';
+import { AppImages } from '../common/appImages';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
 ---
 
 <Layout title="Welcome to Astro.">
 	<main>
 		<Navbar></Navbar>
 		<Hero 
-			imageUrl="/src/img/married.jpeg"
-			title="Tu felicidad, nuestro compromiso"
-			message="Transformamos tus momentos especiales en experiencias inolvidables. Descubre la magia de celebrar con nosotros y disfruta en nuestro exclusivo alojamiento estilo Airbnb. Donde cada detalle cuenta, creamos recuerdos que perduran."
-			buttonLabel="LET'S CONNECT">
+			imageUrl={AppImages.marriedDecoration}
+			title={t('index.heroTitle')}
+			message={t('index.heroMessage')}
+			buttonLabel={t('index.heroActionLabel')}>
 		</Hero>
 	</main>
-</Layout>
+</Layout>../common/appmages.ts
