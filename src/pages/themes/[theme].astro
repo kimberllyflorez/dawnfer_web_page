@@ -1,0 +1,35 @@
+---
+import Navbar from "../../components/Navbar.astro";
+import Layout from "../../layouts/Layout.astro";
+import Hero from "../../components/Hero.astro";
+
+import { getLangFromUrl, useTranslations } from '../../i18n/utils';
+import { AppImages } from '../../common/appImages';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+export async function getStaticPaths() {
+	return [
+		{params: {theme: 'halloween'}},
+		{params: {theme: 'christmas'}},
+		{params: {theme: 'summer'}},
+		{params: {theme: 'winter'}},
+		{params: {theme: 'autumn'}},
+		{params: {theme: 'spring'}},
+	];
+}
+  
+const { theme } = Astro.props;
+---
+<Layout title={t('head.team') - {theme}}>
+	<main>
+		<Navbar></Navbar>
+		<Hero 
+			imageUrl={}
+			title={theme}
+			message={t('index.heroMessage')}
+			buttonLabel={t('index.heroActionLabel')}>
+		</Hero>
+	</main>
+</Layout>
