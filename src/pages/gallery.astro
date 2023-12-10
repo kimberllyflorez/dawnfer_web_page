@@ -6,7 +6,6 @@ import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { AppImages } from '../common/appImages';
 import Hero from "../components/Hero.astro";
 
-
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
@@ -15,7 +14,12 @@ const t = useTranslations(lang);
 <Layout title={t('head.gallery')}>
 	<main>
 		<Navbar></Navbar>
-		<Hero title="Our work"></Hero>
+		<Hero 
+			title="Our work"
+			imageUrl=""
+			message=""
+			buttonLabel="">
+		</Hero>
 		<div class="theme-grid">
 		<GalleryCard imageGallery={AppImages.marriedDecoration}></GalleryCard>
 		<GalleryCard imageGallery={AppImages.galleryfifty}></GalleryCard>

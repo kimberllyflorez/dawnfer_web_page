@@ -5,7 +5,6 @@ import Hero from "../../components/Hero.astro";
 import themesData from "../../data/theme.json";
 
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
-import { AppImages } from '../../common/appImages';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -24,7 +23,6 @@ export function getStaticPaths() {
 
 }
 
-const { theme } = Astro.params;
 const { themeData } = Astro.props;
 
 ---
@@ -35,8 +33,7 @@ const { themeData } = Astro.props;
 			imageUrl={themeData.image}
 			title={themeData.title}
 			message={themeData.message}
-			buttonLabel={t('index.heroActionLabel')}
-			href="/dawnfer_web_page/contact">
+			buttonLabel={t('index.heroActionLabel')}>
 		</Hero>
 	</main>
 </Layout>
