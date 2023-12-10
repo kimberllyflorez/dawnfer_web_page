@@ -1,16 +1,43 @@
 ---
 import Navbar from "../components/Navbar.astro";
 import Layout from "../layouts/Layout.astro";
-
+import GalleryCard from "../components/gallery_card/GalleryCard.astro";
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { AppImages } from '../common/appImages';
+import Hero from "../components/Hero.astro";
+
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
 ---
 
 <Layout title={t('head.gallery')}>
 	<main>
 		<Navbar></Navbar>
+		<Hero title="Our work"></Hero>
+		<div class="theme-grid">
+		<GalleryCard imageGallery={AppImages.marriedDecoration}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.galleryfifty}></GalleryCard>
+	
+		<GalleryCard imageGallery={AppImages.gallerytheme}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.galleryCake}></GalleryCard>
+
+		<GalleryCard imageGallery={AppImages.gallerymarried}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.gallerybaby}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.marriedDecoration}></GalleryCard>
+		</div>
 	</main>
 </Layout>
+<style>
+	.theme-grid {
+		display: grid;
+		align-items: center;
+  		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  		grid-gap: 1rem;
+  		grid-auto-flow: dense;
+		margin: 20px;
+		align-items: center;
+		justify-content: center;
+	}
+</style>
