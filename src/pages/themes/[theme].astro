@@ -2,6 +2,7 @@
 import Navbar from "../../components/Navbar.astro";
 import Layout from "../../layouts/Layout.astro";
 import Hero from "../../components/Hero.astro";
+import themesData from "../../data/theme.json";
 
 import { getLangFromUrl, useTranslations } from '../../i18n/utils';
 import { AppImages } from '../../common/appImages';
@@ -9,27 +10,33 @@ import { AppImages } from '../../common/appImages';
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-export async function getStaticPaths() {
-	return [
-		{params: {theme: 'halloween'}},
-		{params: {theme: 'christmas'}},
-		{params: {theme: 'summer'}},
-		{params: {theme: 'winter'}},
-		{params: {theme: 'autumn'}},
-		{params: {theme: 'spring'}},
-	];
+export function getStaticPaths() {
+
+	const paths = themesData.map((data) => ({
+		params: {
+			theme: data.id,
+		},
+		props: {
+			themeData: data,
+		}
+	}));
+	return paths;
+
 }
-  
-const { theme } = Astro.props;
+
+const { theme } = Astro.params;
+const { themeData } = Astro.props;
+
 ---
-<Layout title={t('head.team') - {theme}}>
+<Layout title={`${t('head.team')} - ${themeData.title}`}>
 	<main>
 		<Navbar></Navbar>
 		<Hero 
-			imageUrl={}
-			title={theme}
-			message={t('index.heroMessage')}
-			buttonLabel={t('index.heroActionLabel')}>
+			imageUrl={themeData.image}
+			title={themeData.title}
+			message={themeData.message}
+			buttonLabel={t('index.heroActionLabel')}
+			href="/dawnfer_web_page/contact">
 		</Hero>
 	</main>
 </Layout>

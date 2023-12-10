@@ -1,0 +1,38 @@
+[
+  {
+    "id": "halloween",
+    "image": "https://www.thespruce.com/thmb/iE2tQoa9VLI6iCbdUkSSDiyKdt4=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/SPR-Kid-Friendly-Halloween-Parties-3129138-hero-cc3f49887bc84afa99c5d2fdb391723e.jpg",
+    "title": "Halloween",
+    "message": "Get ready for a spooktacular night of thrills and chills! Our Halloween Haunt theme is perfect for those who love a good scare. From eerie decorations to costumes that send shivers, let's create a hauntingly memorable experience."
+  },
+  {
+    "id": "winter",
+    "image": "https://img.bizbash.com/files/base/bizbash/bzb/image/2013/01/e18436image1.png?auto=format%2Ccompress&fit=max&q=70&w=1200",
+    "title": "Winter",
+    "message": "Embrace the enchantment of the season! Dive into a world of frosty elegance with our Winter Wonderland theme. Let the magic of snowflakes and shimmering lights turn your event into a chilly celebration that warms the heart."
+  },
+  {
+    "id": "summer",
+    "image": "https://cf.ltkcdn.net/celebrations/parties/images/orig/339572-1600x1066-summer-party-1222166992.jpg",
+    "title": "Summer",
+    "message": "Dive into the sun-soaked vibes of summer! Our Summer Soiree theme is a burst of tropical fun and vibrant energy. From beachy bliss to tropical tunes, let's turn up the heat for an unforgettable summer celebration."
+  },
+  {
+    "id": "christmas",
+    "image": "https://factory51.com.au/wp-content/uploads/2022/08/2382-whole-venue-room-e1566393673611-1024x682-1.jpg",
+    "title": "Christmas",
+    "message": "Step into a world of festive delight with our Christmas Extravaganza theme! Twinkling lights, joyous carols, and the spirit of giving – transform your event into a winter wonderland filled with the magic of Christmas."
+  },
+  {
+    "id": "spring",
+    "image": "https://www.thespruce.com/thmb/HrM5hDhWbnJhfkLquiSuypKamog=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/spring-party-theme-ideas-4137747-03-ee802255ccce40e8b6049bb946f91b59.jpg",
+    "title": "Spring",
+    "message": "Celebrate the bloom of new beginnings! Our Spring Fling theme brings the beauty of blossoms and the freshness of the season to your event. Immerse yourself in a garden of vibrant colors and lively spirits."
+  },
+  {
+    "id": "autumn",
+    "image": "https://www.paperlesspost.com/blog/wp-content/uploads/Blog00_FallParty_PeopleToastInField.png",
+    "title": "Autumn",
+    "message": "Harvest the warmth of autumn at your next event! Our Autumn Harvest theme captures the essence of fall with rustic charm and golden hues. From cozy vibes to the crackle of leaves, let's make your celebration a harvest to remember."
+  }
+]

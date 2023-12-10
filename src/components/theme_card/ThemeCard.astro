@@ -11,17 +11,13 @@ const { href, title, body, image } = Astro.props;
 
 <li class="link-card">
 	<a href={href}>
-		<div class="theme-content">
-			<h2>
-				{title}
-			</h2>
-			<p>
-				{body}
-			</p>
-		</div>
 		<img class="theme-image" src={image}/>
+		<h2>
+			{title}
+		</h2>
 	</a>
 </li>
+
 <style>
 	.link-card {
 		margin: 50px;
@@ -35,7 +31,8 @@ const { href, title, body, image } = Astro.props;
 		box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1);
 	}
 	.link-card > a {
-		display: flex;
+		display: column;
+		align-items: center;
 		width: 100%;
 		text-decoration: none;
 		line-height: 1.4;
@@ -65,6 +62,6 @@ const { href, title, body, image } = Astro.props;
 		color: rgb(var(--accent-light));
 	}
 	.theme-image {
-		width: 65%;
+		width: 100%;
 	}
 </style>
