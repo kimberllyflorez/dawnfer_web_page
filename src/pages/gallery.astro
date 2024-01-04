@@ -5,6 +5,7 @@ import GalleryCard from "../components/gallery_card/GalleryCard.astro";
 import { getLangFromUrl, useTranslations } from '../i18n/utils';
 import { AppImages } from '../common/appImages';
 import Hero from "../components/Hero.astro";
+import Footer from '../components/footer.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -22,16 +23,26 @@ const t = useTranslations(lang);
 		</Hero>
 		<div class="theme-grid">
 		<GalleryCard imageGallery={AppImages.marriedDecoration}></GalleryCard>
-		<GalleryCard imageGallery={AppImages.galleryfifty}></GalleryCard>
-	
+		<GalleryCard imageGallery={AppImages.galleryfifty}></GalleryCard>	
 		<GalleryCard imageGallery={AppImages.gallerytheme}></GalleryCard>
 		<GalleryCard imageGallery={AppImages.galleryCake}></GalleryCard>
-
-		<GalleryCard imageGallery={AppImages.gallerymarried}></GalleryCard>
 		<GalleryCard imageGallery={AppImages.gallerybaby}></GalleryCard>
 		<GalleryCard imageGallery={AppImages.marriedDecoration}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.gallerybabys}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.gallerysofia}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.galleryPartyf}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.galleryPartyb}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.galleryPartyg}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.galleryPartyo}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.galleryPartym}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.gallerymik}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.gallerymarried}></GalleryCard>
+		<GalleryCard imageGallery={AppImages.galleryPartyp}></GalleryCard>
+
+
 		</div>
 	</main>
+	<Footer></Footer>
 </Layout>
 <style>
 	.theme-grid {
